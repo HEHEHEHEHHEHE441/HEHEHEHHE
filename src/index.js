@@ -43,25 +43,7 @@ server.on("upgrade", (req, socket, head) => {
 
 server.on("listening", () => {
   const addr = server.address();
-
-  console.log(`Elixir running on port ${addr.port}`);
-  console.log("");
-  console.log("You may now access it using your browser!");
-
-  console.log(
-    `Local: http://${
-      addr.family === "IPv6" ? `[${addr.address}]` : addr.address
-    }:${addr.port}`
-  );
-  try {
-    console.log(`On Your Network: http://${address.ip()}:${addr.port}`);
-  } catch (err) {
-    /* Can't find LAN interface */
-  }
-  if (process.env.REPL_SLUG && process.env.REPL_OWNER)
-    console.log(
-      `Replit: https://${process.env.REPL_SLUG}.${process.env.REPL_OWNER}.repl.co`
-    );
-});
+  try 
+   
 
 server.listen({ port: process.env.PORT || 8080 });
